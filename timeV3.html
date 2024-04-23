@@ -1,0 +1,71 @@
+
+
+<input type="file" id="input" multiple name="input_video">
+
+<div id="videos-container"></div>
+
+<script>
+document.getElementById("input").addEventListener("change", function () {
+    var videosContainer = document.getElementById("videos-container");
+    var files = this.files;
+
+    // Create a promise array to handle asynchronous video loading
+    var videoPromises = [];
+    //var totalDuration = 302; // задержка перед первой серией
+    var totalDuration = 61; // задержка перед первой серией
+
+    var series = 2; //Вывод колличества серий
+
+    for (var i = 0; i < files.length; i++) {
+        var video = document.createElement("video");
+        video.src = URL.createObjectURL(files[i]);
+        video.controls = true;
+        video.style.display = 'none';
+        videosContainer.appendChild(video);
+
+        // Create a promise for each video load
+        videoPromises.push(new Promise((resolve, reject) => {
+            video.addEventListener("loadedmetadata", function () {
+                //var durationInSeconds = Math.floor(this.duration);
+                var durationInSeconds = Math.round(this.duration);
+                resolve(durationInSeconds); // Resolve with duration
+            });
+            video.addEventListener("error", reject); // Handle errors
+        }));
+    }
+
+    // Handle multiple video loads and display durations in order
+    Promise.all(videoPromises)
+        .then(durations => {
+            var durationNode = document.createElement("div");
+            durationNode.innerHTML += "<br>Таймкоды:<br>";
+            durationNode.innerHTML += "00:00 1 серия<br>";
+
+            for (var duration of durations) {
+
+                totalDuration += duration;
+                if(series-1 == files.length){
+                    durationNode.innerHTML += '<br>' + format(totalDuration) + " полное время сезона <br>";
+                }else{
+                    durationNode.innerHTML += format(totalDuration) + " " + series + " серия<br>";
+                }
+                console.log(format(duration) + ' - ' + duration);
+                series++;
+            }
+
+            videosContainer.appendChild(durationNode);
+        })
+        .catch(error => {
+            console.error("Error loading video:", error);
+            // Handle errors appropriately, e.g., display an error message
+        });
+});
+
+function format(seconds) {
+    let s = (seconds % 60).toString();
+    let m = Math.floor(seconds / 60 % 60).toString();
+    let h = Math.floor(seconds / 60 / 60 % 60).toString();
+    return `${h.padStart(2, '0')}:${m.padStart(2, '0')}:${s.padStart(2, '0')}`;
+}
+
+</script>
