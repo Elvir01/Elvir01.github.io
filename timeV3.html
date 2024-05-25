@@ -1,13 +1,23 @@
 
+<style>
+    body{
+        font-size: larger;
+        color: #4caf50;
+        /* background-color: #0f0f0f; */
+        background-color: #272727;
+    }
+</style>
+
 Длительность задержки: <input type="number" value="63" id="durationInput">
 <br><br>
-<input type="file" id="input" multiple name="input_video">
+<input type="file" id="input" style="font-size: large;" multiple name="input_video">
 
 <div id="videos-container"></div>
 
 <script>
 document.getElementById("input").addEventListener("change", function () {
     var videosContainer = document.getElementById("videos-container");
+    videosContainer.innerHTML = '';
     var files = this.files;
 
     // Create a promise array to handle asynchronous video loading
