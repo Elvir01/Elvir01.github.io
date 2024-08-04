@@ -1,0 +1,97 @@
+
+<style>
+    body{
+        font-size: larger;
+        color: white;
+        /* background-color: #0f0f0f; */
+        background-color: #000000;
+    }
+</style>
+
+Длительность задержки: <input value="63" id="durationInput">
+<br><br>
+Добавленное время к каждой серии: <input value="0.0" id="PlusDuration">
+<br><br>
+С какой серии добавлять доп время: <input type="number" value="1" id="SeriesNumber">
+<br><br>
+<input type="file" id="input" style="font-size: large;" multiple name="input_video">
+
+<div id="videos-container"></div>
+
+<script>
+document.getElementById("input").addEventListener("change", function () {
+    var videosContainer = document.getElementById("videos-container");
+    videosContainer.innerHTML = '';
+    var files = this.files;
+
+    // Create a promise array to handle asynchronous video loading
+    var videoPromises = [];
+	//var totalDuration = 63; // задержка перед первой серией
+	var totalDuration = parseFloat(document.getElementById('durationInput').value);
+    var PlusDuration = parseFloat(document.getElementById('PlusDuration').value);
+    var SeriesNumber = parseFloat(document.getElementById('SeriesNumber').value);
+    var series = 2; //Вывод колличества серий
+
+    for (var i = 0; i < files.length; i++) {
+        var video = document.createElement("video");
+        video.src = URL.createObjectURL(files[i]);
+        video.controls = true;
+        video.style.display = 'none';
+        videosContainer.appendChild(video);
+
+        // Create a promise for each video load
+        videoPromises.push(new Promise((resolve, reject) => {
+            video.addEventListener("loadedmetadata", function () {
+                //var durationInSeconds = Math.floor(this.duration);
+                var durationInSeconds = Math.round(this.duration);
+                resolve(durationInSeconds); // Resolve with duration
+            });
+            video.addEventListener("error", reject); // Handle errors
+        }));
+    }
+
+    // Handle multiple video loads and display durations in order
+    Promise.all(videoPromises)
+        .then(durations => {
+            var durationNode = document.createElement("div");
+            durationNode.innerHTML += "<br>Таймкоды:<br>";
+            durationNode.innerHTML += "00:00 1 серия<br>";
+
+            for (var duration of durations) {
+                //durationNode.innerHTML += PlusDuration + "<br>";
+                if(SeriesNumber <= series){
+                    if(PlusDuration){
+                        totalDuration += duration + PlusDuration;
+                    }else{
+                        totalDuration += duration;
+                    }
+                }else{
+                    totalDuration += duration;
+                }
+                if(series-1 == files.length){
+                    durationNode.innerHTML += '<br>' + format(totalDuration) + " полное время сезона <br>";
+                }else{
+                    durationNode.innerHTML += format(totalDuration) + " " + series + " серия<br>";
+                }
+                console.log(format(duration) + ' - ' + duration);
+                series++;
+            }
+
+            videosContainer.appendChild(durationNode);
+        })
+        .catch(error => {
+            console.error("Error loading video:", error);
+            // Handle errors appropriately, e.g., display an error message
+        });
+});
+
+function format(seconds) {
+    let s = Math.floor(seconds % 60).toString();
+    let m = Math.floor(seconds / 60 % 60).toString();
+    let h = Math.floor(seconds / 60 / 60 % 60).toString();
+    //let m = (seconds / 60 % 60).toString();
+    //let h = (seconds / 60 / 60 % 60).toString();
+    return `${h.padStart(2, '0')}:${m.padStart(2, '0')}:${s.padStart(2, '0')}`;
+}
+
+</script>
