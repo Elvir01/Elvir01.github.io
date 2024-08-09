@@ -10,7 +10,9 @@
 
 Длительность задержки: <input value="63" id="durationInput">
 <br><br>
-Добавленное время к каждой серии: <input value="0.0" id="PlusDuration">
+Time + : <input value="0.0" id="PlusDuration">
+<br><br>
+Time - : <input value="0.0" id="MinusDuration">
 <br><br>
 С какой серии добавлять доп время: <input type="number" value="1" id="SeriesNumber">
 <br><br>
@@ -29,6 +31,7 @@ document.getElementById("input").addEventListener("change", function () {
 	//var totalDuration = 63; // задержка перед первой серией
 	var totalDuration = parseFloat(document.getElementById('durationInput').value);
     var PlusDuration = parseFloat(document.getElementById('PlusDuration').value);
+    var MinusDuration = parseFloat(document.getElementById('MinusDuration').value);
     var SeriesNumber = parseFloat(document.getElementById('SeriesNumber').value);
     var series = 2; //Вывод колличества серий
 
@@ -62,6 +65,8 @@ document.getElementById("input").addEventListener("change", function () {
                 if(SeriesNumber <= series){
                     if(PlusDuration){
                         totalDuration += duration + PlusDuration;
+                    }else if(MinusDuration){
+                        totalDuration += duration - MinusDuration;
                     }else{
                         totalDuration += duration;
                     }
