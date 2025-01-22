@@ -1,5 +1,6 @@
 
-<style>
+<!-- saved from url=(0037)https://elvir01.github.io/timeV5.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
     body{
         font-size: larger;
         color: white;
@@ -8,7 +9,7 @@
     }
 </style>
 
-Длительность задержки: <input value="13" id="durationInput">
+</head><body>Длительность задержки: <input value="13" id="durationInput">
 <br><br>
 Time + : <input value="0.0" id="PlusDuration">
 <br><br>
@@ -16,7 +17,7 @@ Time - : <input value="0.0" id="MinusDuration">
 <br><br>
 С какой серии добавлять доп время: <input type="number" value="1" id="SeriesNumber">
 <br><br>
-<input type="file" id="input" style="font-size: large;" multiple name="input_video">
+<input type="file" id="input" style="font-size: large;" multiple="" name="input_video">
 
 <div id="videos-container"></div>
 
@@ -74,7 +75,8 @@ document.getElementById("input").addEventListener("change", function () {
                     totalDuration += duration;
                 }
                 if(series-1 == files.length){
-                    durationNode.innerHTML += '<br>' + format(totalDuration) + " полное время сезона <br>";
+                    durationNode.innerHTML += '<br>' + format(totalDuration) + " Конец <br>";
+                    durationNode.innerHTML += '<br>' + totalDuration + " секунд <br>" + totalDuration / 60 + ' минут';
                 }else{
                     durationNode.innerHTML += format(totalDuration) + " " + series + " серия<br>";
                 }
@@ -90,7 +92,7 @@ document.getElementById("input").addEventListener("change", function () {
         });
 });
 
-function format(seconds) {
+function format(seconds, last) {
     let s = Math.floor(seconds % 60).toString();
     let m = Math.floor(seconds / 60 % 60).toString();
     let h = Math.floor(seconds / 60 / 60 % 60).toString();
@@ -100,3 +102,4 @@ function format(seconds) {
 }
 
 </script>
+</body></html>
