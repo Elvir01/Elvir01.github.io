@@ -1,4 +1,7 @@
 #EXTM3U url-tvg="http://epg.team/tvteam.3.1.xml"
-#EXTINF:0 tvg-id="Дождь"  tvg-logo="http://tv.team/images/chIcons/88.png", Дождь
+#EXTINF:0 tvg-id="Дождь"  tvg-logo="http://tv.team/images/chIcons/88.png", Дождь FullHD
 #EXTGRP:2. News/Новости
 https://wl.tvrain.tv/transcode/ngrp:ses_all/playlist.m3u8
+#EXTINF:0 tvg-id="Дождь"  tvg-logo="http://tv.team/images/chIcons/88.png", Дождь HD
+#EXTGRP:2. News/Новости
+https://wl.tvrain.tv/transcode/ngrp:ses_all/chunklist_b2692000.m3u8
