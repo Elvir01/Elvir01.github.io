@@ -12,10 +12,10 @@ https://rfe-ingest.akamaized.net/hls/live/2033043/tvmc05/master.m3u8
 #EXTINF:0 tvg-id="Нaстоящее время HD"  tvg-logo="http://tv.team/images/chIcons/528.png", Нaстоящее время HD
 https://rfe-ingest.akamaized.net/hls/live/2033043/tvmc05/playlist_0720.m3u8
 
-#EXTINF:0 tvg-id="РБК НD"  tvg-logo="http://tv.team/images/chIcons/99.png"  timeshift="0", РБК FullНD
+#EXTINF:0 tvg-id="РБК НD"  tvg-logo="http://tv.team/images/chIcons/99.png", РБК FullНD
 https://online-video.rbc.ru/online/rbctvhd.m3u8
 
-#EXTINF:0 tvg-id="РБК НD"  tvg-logo="http://tv.team/images/chIcons/99.png"  timeshift="0", РБК НD
+#EXTINF:0 tvg-id="РБК НD"  tvg-logo="http://tv.team/images/chIcons/99.png", РБК НD
 https://online-video.rbc.ru/online/rbctv_720p/index.m3u8
 
 #EXTINF:-1 tvg-id="millet",Миллет
@@ -66,22 +66,6 @@ https://live-nntv2.cdnvideo.ru/nntv2/cfd99gu0ai_nntv_tv/playlist.m3u8
 #EXTINF:0 tvg-id="teotv",ТЕО-ТВ
 https://stream.teotv.ru/live/site360/playlist.m3u8
 
-#EXTINF:0 tvg-id="aist" catchup="append" catchup-days="3" catchup-source="?offset=-${offset}",Аист
-#EXTVLCOPT:http-referrer=https://wink.rt.ru/
-http://rt-sib-irk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_IRK_AIST/variant.m3u8
-
-#EXTINF:0 tvg-id="aktis" catchup="append" catchup-days="3" catchup-source="?offset=-${offset}",Актис
-#EXTVLCOPT:http-referrer=https://wink.rt.ru/
-https://rt-sib-irk-htlive-lb.cdn.ngenix.net/hls/CH_R01_OTT_SIB_IRK_AKTIS/variant.m3u8?version=2
-
-#EXTINF:0 tvg-id="arig-us-24" catchup="append" catchup-days="3" catchup-source="?offset=-${offset}",Ариг Ус 24
-#EXTVLCOPT:http-referrer=https://wink.rt.ru/
-http://rt-sib-uude-htlive.cdn.ngenix.net/hls/CH_R01_ARIGUS/variant.m3u8
-
-#EXTINF:0 tvg-id="arig-volga-24" catchup="append" catchup-days="3" catchup-source="?offset=-${offset}",Волга
-#EXTVLCOPT:http-referrer=https://wink.rt.ru/
-http://rt-vlg-nn-htlive.cdn.ngenix.net/hls/CH_R03_OTT_VLG_NN_VOLGA/variant.m3u8
-
 #EXTINF:0 tvg-id="domkino-premium",Дом Кино Премиум
 http://tv.ttk.mx:9084
 
@@ -103,19 +87,8 @@ http://tv.ttk.mx:9032
 #EXTINF:0 tvg-id="kinopokaz",Кинопоказ
 http://tv.ttk.mx:9150
 
-#EXTINF:0 tvg-id="zee-tv",Zee TV ---
-https://sc.id-tv.kz/ZeeTVHD_34_35.m3u8
-  
 #EXTINF:0 tvg-id="timeless-dizi",Timeless Dizi Channel
 http://tv.ttk.mx:9189
-
-#EXTINF:0 tvg-id="ultra-hd-cinema" catchup="append" catchup-days="3" catchup-source="?offset=-${offset}",Ultra HD Cinema
-#EXTVLCOPT:http-referrer=https://wink.rt.ru/
-http://zabava-htlive.cdn.ngenix.net/hls/CH_ULTRAHDCINEMA/variant.m3u8
-
-#EXTINF:0 tvg-id="doverie" catchup="append" catchup-days="3" catchup-source="?offset=-${offset}",Москва. Доверие
-#EXTVLCOPT:http-referrer=https://wink.rt.ru/
-http://rt-mos-htlive.cdn.ngenix.net/hls/CH_R04_OTT_DOVERIE/variant.m3u8?version=2
 
 #EXTINF:0 tvg-id="tvxxi",TV XXI
 http://tv.ttk.mx:9067
@@ -174,14 +147,11 @@ http://tv.ttk.mx:9048
 #EXTINF:0 tvg-id="bolshaya-azia",Большая Азия
 http://tv.ttk.mx:9146
 
-#EXTINF:0 tvg-id="nano-tv",Нано ---
+#EXTINF:0 tvg-id="nano-tv",Нано
 http://tv.ttk.mx:9138
 
-#EXTINF:0 tvg-id="texno-24",Техно 24 ---
+#EXTINF:0 tvg-id="texno-24",Техно 24
 http://tv.ttk.mx:9056
-
-#EXTINF:0 tvg-id="muztv" catchup="append" catchup-days="3" catchup-source="?offset=-${offset}",Муз-ТВ
-http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV/variant.m3u8
 
 #EXTINF:0 tvg-id="muzyka-pervogo",Музыка Первого
 http://tv.ttk.mx:9078
