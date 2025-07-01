@@ -162,4 +162,52 @@ http://tv.ttk.mx:9062
 #EXTINF:0 tvg-id="vostok-tv",Восток ТВ
 http://tv.ttk.mx:9064
 
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Ялта-1
+http://tv.ttk.mx:9126
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Ялта-2
+http://tv.ttk.mx:9125
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Мемориал "Красный"
+http://tv.ttk.mx:9124
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Симферополь-ГРЭС
+http://tv.ttk.mx:9123
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Мирное-Спортплощадка 1
+http://tv.ttk.mx:9166
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Мирное-Спортплощадка 2
+http://tv.ttk.mx:9168
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Симферополь. Соборная мечеть
+http://tv.ttk.mx:9167
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Черноморское-Спортплощадка
+http://tv.ttk.mx:9170
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Черноморское-Пляж
+http://tv.ttk.mx:9175
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Николаевка
+http://tv.ttk.mx:9174
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Судак
+http://tv.ttk.mx:9176
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Судак Пляж
+http://tv.ttk.mx:9178
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Симферополь Площадь Ленина
+https://iptv.media-ix.com:11443/cam01/index.m3u8
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Симферополь ул. Пушкина
+https://iptv.media-ix.com:11443/cam-pushkina/index.m3u8
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Симферополь ул. Екатерининская
+https://iptv.media-ix.com:11443/cam-km/index.m3u8
+
+#EXTINF:-1 group-title="Камеры" tvg-logo="https://img1.freepng.ru/20180624/icf/kisspng-tabletop-games-expansions-simferopol-alupka-alus-crimea-5b3062bbe358f5.2262619415298976599312.jpg",Алушта с. Рыбачье
+https://iptv.media-ix.com:11443/cam-rybachie/index.m3u8
+
 
