@@ -18,6 +18,10 @@ https://online-video.rbc.ru/online/rbctvhd.m3u8
 #EXTINF:0 tvg-id="РБК НD"  tvg-logo="http://tv.team/images/chIcons/99.png", РБК НD
 https://online-video.rbc.ru/online/rbctv_720p/index.m3u8
 
+
+https#EXTINF:0 tvg-id="trt"  tvg-logo="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.trt1.com.tr/&ved=2ahUKEwiO14OknP6RAxWr2AIHHTbHOoAQFnoECDAQAQ&usg=AOvVaw2yy1mLovBO4gnDUXttdtaH", TRT
+://tv-trtmuzik.medya.trt.com.tr/master_720.m3u8
+
 #EXTINF:-1 tvg-id="millet",Миллет
 http://live.trkmillet.ru/millet/index.m3u8
 
