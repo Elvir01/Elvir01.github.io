@@ -20,6 +20,7 @@ https://online-video.rbc.ru/online/rbctv_720p/index.m3u8
 
 
 https#EXTINF:0 tvg-id="trt"  tvg-logo="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.trt1.com.tr/&ved=2ahUKEwiO14OknP6RAxWr2AIHHTbHOoAQFnoECDAQAQ&usg=AOvVaw2yy1mLovBO4gnDUXttdtaH", TRT
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
 https://tv-trtmuzik.medya.trt.com.tr/master_720.m3u8
 
 #EXTINF:-1 tvg-id="millet",Миллет
